@@ -53,10 +53,10 @@ build:
       - if: build_platform == host_platform
         then:
           - mkdir ($prefix)/share/bash-completion/completions ($prefix)/share/fish/vendor_completions.d ($prefix)/share/zsh/site-functions
-          - let bin = $prefix | path join bin/aube
-          - ^$bin completion bash | save ($prefix | path join share/bash-completion/completions/aube)
-          - ^$bin completion fish | save ($prefix | path join share/fish/vendor_completions.d/aube.fish)
-          - ^$bin completion zsh  | save ($prefix | path join share/zsh/site-functions/_aube)
+          - let bin = ($prefix)/bin/aube
+          - ^$bin completion bash | save ($prefix)/share/bash-completion/completions/aube
+          - ^$bin completion fish | save ($prefix)/share/fish/vendor_completions.d/aube.fish
+          - ^$bin completion zsh  | save ($prefix)/share/zsh/site-functions/_aube
 
 requirements:
   build:
